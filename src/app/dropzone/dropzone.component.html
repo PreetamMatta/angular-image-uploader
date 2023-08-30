@@ -1,0 +1,11 @@
+<div class="dropzone-container">
+  <div class="dropzone" (drop)="onDrop($event)" (dragover)="onDragOver($event)">
+    <p>Drag and drop a JPG file here</p>
+    <input type="file" (change)="onFileSelected($event)" accept=".jpg" />
+  </div>
+  <div *ngIf="selectedFile" class="image-preview">
+    <img [src]="displayImage" alt="Selected Image" />
+    <p>{{ selectedFile.name }}</p>
+    <button (click)="uploadImage()" [disabled]="isUploading">Upload</button>
+  </div>
+</div>
