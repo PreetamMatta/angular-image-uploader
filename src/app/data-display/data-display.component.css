@@ -1,0 +1,11 @@
+.data-display {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+  }
+  
+  .data-display pre {
+    white-space: pre-wrap;
+  }
+  
