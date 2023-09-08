@@ -2,6 +2,7 @@
   <div class="dropzone" (drop)="onDrop($event)" (dragover)="onDragOver($event)">
     <p>Drag and drop a JPG file here</p>
     <input type="file" (change)="onFileSelected($event)" accept=".jpg" />
+    <button (click)="fetchData()">Fetch Data</button>
   </div>
   <div *ngIf="selectedFile" class="image-preview">
     <img [src]="displayImage" alt="Selected Image" />
