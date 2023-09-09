@@ -36,7 +36,10 @@ export class DropzoneComponent {
   }
 
   handleFile(file: File) {
-    if (file && file.type === 'image/jpeg') {
+    if (
+      (file && file.type === 'image/jpeg') ||
+      file.type === 'application/pdf'
+    ) {
       this.selectedFile = file;
       this.displayImage = URL.createObjectURL(file);
     }
